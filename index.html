@@ -1,17 +1,68 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <style>
-    div {margin-top: 15px}
-  </style>
-</head>
-
-<body>
-  <from method="POST" autocomplete="on" action=lab4formscript.php>
-  </from>
-
-
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+   <style>
+     div {margin-top: 15px}
+   </style>
+  </head>
+  <body>
+   <from method="POST" autocomplete="on" action=lab4formscript.php>
+     <fieldset>
+       <legend><strong>My Info</strong></legend>
+         <div>
+           <label>First Name: <input type="text" name="first_name_field" placeholder="First Name"></label>
+         </div>
+         <div>
+           <label>Last Name: <input type="text" name="last_name_field" placeholder="Last Name"></label>
+         </div>
+          <div>
+           <label>Phone Number: <input type="tel" name="phone_field" placeholder="000-000-0000"></label>
+         </div>
+         <div>
+           <label>Email Adress: <input type="email" name="email_field" placeholder="you@gmail.com"></label>
+         </div>
+         <div>
+           <label>Gender:  </label>
+           <label> Male<input type="radio" name="gender_field" value="male">
+           <label> Female<input type="radio" name="gender_field" value="female">
+           <label> other<input type="radio" name="gender_field" value="other">
+         </div>
+         <div>
+           <label>Age: </label>
+           <select name="age_field">
+             <option value="under 18">Under 18</option>
+             <option value="18-24">18-24</option>
+             <option value="25-34">25-34</option>
+              <option value="35-44">35-44</option>
+              <option value="45-54">45-54</option>
+              <option value="55-64">55-64</option>
+              <option value="65-74">65-74</option>
+              <option value="75-84">75-84</option>
+              <option value="85-94">85-94</option>
+              <option value="above 95">above 95</option>
+            </select>
+          </div>
+     </fieldset> 
+      <fieldset>
+        <legend><strong>My Availibility</strong></legend>
+        <div>
+          <label>Available days</label>
+          <label> Monday<input type="checkbox" name="Avalailable_field[]" value="Monday"></label><br>
+          <label> Tuesday<input type="checkbox" name="Avalailable_field[]" value="Tuesday"></label><br>
+          <label> Wednesday<input type="checkbox" name="Avalailable_field[]" value="Wenesday"></label><br>
+          <label> Thursday<input type="checkbox" name="Avalailable_field[]" value="Thursday"></label><br>
+          <label> Friday<input type="checkbox" name="Avalailable_field[]" value="Friday"></label><br>
+          <label> Saturday<input type="checkbox" name="Avalailable_field[]" value="Saturday"></label><br>
+          <label> Sunday<input type="checkbox" name="Avalailable_field[]" value="Sunday"></label>
+        </div>
+      </fieldset>
+      <div>
+        <input type="hidden" name="hidden_field" value="aschatz">
+      </div>
+      <input type="submit" value="Send Me">
+    </form>
+  </body>
+</html>
